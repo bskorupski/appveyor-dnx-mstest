@@ -1,0 +1,12 @@
+version: 1.0.{build}
+before_build:
+- cmd: dnu restore
+after_build:
+- cmd: dnu publish DNXConsoleApp
+test_script:
+- cmd: dnx -p DNXConsoleApp.MSTest test
+artifacts:
+- path: DNXConsoleApp\bin\output\approot
+  name: AppRoot
+build:
+  verbosity: normal
