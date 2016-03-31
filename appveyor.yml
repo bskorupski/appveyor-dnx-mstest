@@ -2,12 +2,14 @@ version: 1.0.{build}
 cache: C:\Users\appveyor\.dnx\packages
 before_build:
 - cmd: dnu restore
+build_script:
+- cmd: dnu build src\DNXConsoleApp test\DNXConsoleApp.MSTest
 after_build:
-- cmd: dnu publish DNXConsoleApp
+- cmd: dnu publish src\DNXConsoleApp
 test_script:
-- cmd: dnx -p DNXConsoleApp.MSTest test
+- cmd: dnx -p test\DNXConsoleApp.MSTest test
 artifacts:
-- path: DNXConsoleApp\bin\output\approot
+- path: src\DNXConsoleApp\bin\output\approot
   name: AppRoot
 build:
   verbosity: normal
