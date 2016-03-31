@@ -1,0 +1,6 @@
+{
+    "projects": [ "DNXConsoleApp", "DNXConsoleApp.MSTest" ],
+    "sdk": { 
+        "version": "1.0.0-rc-update2"
+    }
+}

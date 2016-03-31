@@ -1,0 +1,35 @@
+﻿{
+    "version": "1.0.0-*",
+    "description": "DNXConsoleApp.MSTest - Tests written with MSTest for Sample DNX Project",
+    "authors": "bskorupski",
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+
+    "dependencies": {
+        "MSTest.UnitTestFramework": "1.0.0-alpha7",
+        "MSTest.Runner.Dnx": "1.0.0-rc1",
+        "DNXConsoleApp": "1.0.0-*"
+    },
+
+    "commands": {
+        "test": "MSTest.Runner.Dnx"
+    },
+
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": {
+            "dependencies": {
+                "Microsoft.CSharp": "4.0.1-beta-23516",
+                "System.Collections": "4.0.11-beta-23516",
+                "System.Linq": "4.0.1-beta-23516",
+                "System.Runtime": "4.0.21-beta-23516",
+                "System.Threading": "4.0.11-beta-23516"
+            }
+        }
+    }
+}
