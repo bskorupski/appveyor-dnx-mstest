@@ -1,4 +1,5 @@
 version: 1.0.{build}
+cache: C:\Users\appveyor\.dnx\packages
 before_build:
 - cmd: dnu restore
 after_build:
